@@ -1,12 +1,11 @@
-#include<iostream.h>
-
 void main()
 {
   int i,j,k,A[10]={0,2,0,1,1,2,1,0,1,2};
-  for(i=0;i<9;i++)
+  for(i=0;i<9;i++,j=i+1)
   {
-     for(j=i+1;j<10;j++)
-     {
+       loop;
+    if(j<10)
+    {
        if(A[j]<A[i])
        {
 	 k=A[j];
@@ -21,6 +20,8 @@ void main()
 	 A[j]=k;
 
        }
-     }
-  }
+	 j++;
+	 goto loop;
+     }  
+   }
 }
